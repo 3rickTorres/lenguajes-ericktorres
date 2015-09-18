@@ -17,6 +17,8 @@ public class Lenguajes3rickTorres {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("mi primier programa de java");
+        Imc objeto=new Imc();
+        System.out.println(objeto.calcular());
     }
     
 }
