@@ -35,6 +35,11 @@ public class VentanaImc extends javax.swing.JFrame {
         etiquetaResultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                formFocusGained(evt);
+            }
+        });
 
         jLabel1.setText("Introduce tu peso.");
 
@@ -111,14 +116,23 @@ public class VentanaImc extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Imc objeto=new Imc(12);
-        etiquetaResultado.setText(""+objeto.calcular());
+        
+        Float peso= Float.parseFloat(jTextField1.getText());
+        Float altura= Float.parseFloat(jTextField2.getText());
+        
+        
+        Imc objeto=new Imc(peso,altura);
+        etiquetaResultado.setText(objeto.calcular());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void formFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formFocusGained
 
     /**
      * @param args the command line arguments
