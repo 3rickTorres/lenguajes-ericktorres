@@ -121,8 +121,7 @@ public class VentanaImc extends javax.swing.JFrame {
         Float altura= Float.parseFloat(jTextField2.getText());
         
         
-        Imc objeto=new Imc(peso,altura);
-        etiquetaResultado.setText(objeto.calcular());
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed

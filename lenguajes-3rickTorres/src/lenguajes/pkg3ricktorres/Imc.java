@@ -1,60 +1,81 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package lenguajes.pkg3ricktorres;
+////// creando constructores
+package javaapplication2;
 
-/**
- *
- * @author T-107
- */
+////////// en esta parte se declaran las variables a ocupar dentro del contructor
 public class Imc {
     float peso;
     float altura;
+   
+   
     
-    public Imc(float p, float a)
-    {
-        peso=p;
-        altura=a;
+    /////// Se crea el otro constructor con el que se  van a pasar las variables que
+    /////// el usuario ingresa en la ventana grafica y se le asignan a las variables 
+    ///////que van a realizar la operacion del calculo.
+    
+    public Imc(float p,float a ){
+    
+    peso=p;
+    altura=a;
+    
+    
     }
     
+    
+    
     public Imc(){
-        peso=150f;
-        altura=1.11f;
-        }
-    public Imc (float f){
-        //Este codigo no tiene nada que ver con los constructores.
-        byte b=2;
+    
+    peso=72f;
+    altura=1.60f;
+    
+    
+    
+    }
+    
+    public Imc(float f){
+    
+    //este codigo no tiene nada que ver con los constructores  
+        byte b=127;
         short s=2;
         int i=2;
         long l=2;
-        //reasignamos
+        
+        // reasignamos 
+        
         b=(byte)i;
-        l=i;
-        s=(short)l;
-        s=b;
-        l=s;
-        s=(short)l;
-        s=(short)i;
-        l=b;
         
-        
-        
-                
+    
+    
     }
-    public float calcular(){
+
+    
+  /// Este metodo se ocupa para realizar el calculo del Imc en esta parte  
+    public String calcular(){
+        
     float resultadoImc=peso/(altura*altura);
-    return resultadoImc;
-    
-   if(resultadoImc <=20)
-    {
-        System.out.println("as");
+    String mensaje;
+   
+     if(resultadoImc<20){
+    mensaje=" Tu nivel de grasa es bajo";
+     }
+    else  if(resultadoImc>=20||resultadoImc<25) {
+    mensaje="Tu nivel de grasa es normal";
     }
-    
-    if(resultadoImc >=20 &&  <=25)
-    {
-        System.out.println("as");
+    else  if(resultadoImc>=25||resultadoImc<30){
+     mensaje="Tu nivel de grasa es alto";
     }
+    else  
+    mensaje="Tu nivel de grasa es exagerado";
+                  
+     
+                          
+        return mensaje+"  tu Imc es : "+resultadoImc;
+        
+        
+        
+      
+    }
+            
+    
+
     
 }

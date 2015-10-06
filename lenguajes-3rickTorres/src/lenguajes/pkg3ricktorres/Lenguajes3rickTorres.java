@@ -11,14 +11,21 @@ package lenguajes.pkg3ricktorres;
  */
 public class Lenguajes3rickTorres {
 
-    /**
-     * @param args the command line arguments
-     */
+ 
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("mi primier programa de java");
-        Imc objeto=new Imc();
-        System.out.println(objeto.calcular());
+                // TODO code application logic here
+               
+                Imc objeto=new Imc();
+                System.out.println("Tu imc es de:"+objeto.calcular());    
+              
+                
+                
+                //String x="12";
+              // Float valor = Float.parseFloat(x);
+               /// System.out.println(valor);
+                
+                
+                
     }
     
 }
